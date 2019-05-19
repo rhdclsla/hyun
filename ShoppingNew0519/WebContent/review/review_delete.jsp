@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"%>
 <%
 	int num=Integer.parseInt(request.getParameter("num"));
 %>
 <html>
 <head>
-<title>MVC ê²Œì‹œíŒ</title>
+<title>MVC °Ô½ÃÆÇ</title>
 </head>
 <body>
 <form name="deleteForm" action="./ReviewDeleteAction.re?num=<%=num %>" 
@@ -12,7 +12,7 @@
 <table border=1>
 <tr>
 	<td>
-		<font size=2>ê¸€ ë¹„ë°€ë²ˆí˜¸ : </font>
+		<font size=2>±Û ºñ¹Ð¹øÈ£ : </font>
 	</td>
 	<td>
 		<input name="REVIEW_PASS" type="password">
@@ -20,9 +20,9 @@
 </tr>
 <tr>
 	<td colspan=2 align=center>
-		<a href="javascript:deleteForm.submit()">ì‚­ì œ</a>
+		<a href="javascript:deleteForm.submit()">»èÁ¦</a>
 		&nbsp;&nbsp;
-		<a href="javascript:history.go(-1)">ëŒì•„ê°€ê¸°</a>
+		<a href="javascript:history.go(-1)">µ¹¾Æ°¡±â</a>
 	</td>
 </tr>
 </table>

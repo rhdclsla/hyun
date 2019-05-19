@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"%>
 <%@ page import="java.util.*"%>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="net.board.db.*" %>

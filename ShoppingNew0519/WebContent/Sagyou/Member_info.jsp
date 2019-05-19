@@ -1,17 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+	pageEncoding="euc-kr"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="javax.sql.*"%>
 <%@ page import="javax.naming.*"%>
 <%@page import="java.util.List"%>
 <%@page import="net.member.db.MemberBean"%>
-<%request.setCharacterEncoding("UTF-8"); %>
+<%request.setCharacterEncoding("euc-kr"); %>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>íšŒì› ì •ë³´ ìƒì„¸ë³´ê¸°</title>
+<title>È¸¿ø Á¤º¸ »ó¼¼º¸±â</title>
 <style type="text/css">
 table {
 	width: 1000px;

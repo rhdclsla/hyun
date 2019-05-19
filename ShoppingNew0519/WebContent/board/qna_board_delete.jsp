@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"%>
 <%
 	int num=Integer.parseInt(request.getParameter("num"));
 %>
 <html>
 <head>
-<title>MVC ê²Œì‹œíŒ</title>
+<title>MVC °Ô½ÃÆÇ</title>
 </head>
 <body>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -13,7 +13,7 @@
 <table>
 <tr>
 	<td style="font-size:17pt;">
-		<font size=5>ê¸€ ë¹„ë°€ë²ˆí˜¸ : </font>
+		<font size=5>±Û ºñ¹Ð¹øÈ£ : </font>
 	</td>
 	<td >
 		<input name="BOARD_PASS" type="password" style="font-size:17pt;">
@@ -22,9 +22,9 @@
 <tr>
 	<td colspan=2 align=center>
 	<font size=4>
-		<a href="javascript:deleteForm.submit()">ì‚­ì œ</a>
+		<a href="javascript:deleteForm.submit()">»èÁ¦</a>
 		&nbsp;&nbsp;
-		<a href="javascript:history.go(-1)">ëŒì•„ê°€ê¸°</a>
+		<a href="javascript:history.go(-1)">µ¹¾Æ°¡±â</a>
 		</font>
 	</td>
 </tr>

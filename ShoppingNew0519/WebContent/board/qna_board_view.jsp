@@ -1,4 +1,4 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"%>
 <%@ page import="net.board.db.*" %>
 <%
 	BoardBean board = (BoardBean)request.getAttribute("boarddata");
@@ -7,7 +7,6 @@
 <html>
 <head>
 
-
 	<title>Q&A Detail</title>
 	<style type="text/css">
 
@@ -15,7 +14,6 @@
 </head>
 
 <body>
-
 <div id="container">
 <div><jsp:include page="/header.jsp"></jsp:include></div>
 <!-- 게시판 수정 -->
@@ -41,7 +39,6 @@
 	</tr>
 	
 	<tr>
-
 		<td style="font-family:돋음; font-size:20">
 			<div align="center">내 용</div>
 		</td>
@@ -51,7 +48,6 @@
 
 				<tr>
 					<td valign=top style="font-family:돋음; font-size:20">
-
 					<%=board.getBOARD_CONTENT() %>
 					</td>
 				</tr>
@@ -59,12 +55,10 @@
 		</td>
 	</tr>
 	<tr>
-
 		<td style="font-family:돋음; font-size:20">
 			<div align="center">첨부파일</div>
 		</td>
 		<td style="font-family:돋음; font-size:20">
-
 		<%if(!(board.getBOARD_FILE()==null)){ %>
 		<a href="./boardupload/<%=board.getBOARD_FILE()%>">
 			<%=board.getBOARD_FILE() %>
@@ -97,10 +91,8 @@
 		</td>
 	</tr>
 
-
 </table></center></div>
 <!-- 게시판 수정 -->
 </div>
-
 </body>
 </html>

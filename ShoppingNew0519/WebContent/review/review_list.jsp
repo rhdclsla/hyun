@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"%>
 <%@ page import="java.util.*"%>
 <%@ page import="java.text.SimpleDateFormat"%>
 <%@ page import="net.review.db.*"%>
@@ -47,12 +47,12 @@ Button {
 
 		<%-- <%
 	if(session.getAttribute("id").equals("admin")){%>
-		<%=session.getAttribute("id")%>ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤.<br>
-		<a href = "MemberListViewAction.mo">ê´€ë¦¬ìžëª¨ë“œ ì ‘ì†(íšŒì› ëª©ë¡ë³´ê¸°)</a>
+		<%=session.getAttribute("id")%>´Ô È¯¿µÇÕ´Ï´Ù.<br>
+		<a href = "MemberListViewAction.mo">°ü¸®ÀÚ¸ðµå Á¢¼Ó(È¸¿ø ¸ñ·Ïº¸±â)</a>
 	<%}else{%>
-		<%=	session.getAttribute("id")%>ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤.
+		<%=	session.getAttribute("id")%>´Ô È¯¿µÇÕ´Ï´Ù.
 	<%} %> --%>
-		<!-- ê²Œì‹œíŒ ë¦¬ìŠ¤íŠ¸ -->
+		<!-- °Ô½ÃÆÇ ¸®½ºÆ® -->
 		<br>
 		<br>
 		<br>
@@ -67,24 +67,24 @@ Button {
 			<tr align="center" valign="middle">
 				<td colspan="4" style="font-size: 40pt; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REVIEW</td>
 
-				<td align=right><font size=4>ê¸€ ê°œìˆ˜ : ${listcount }</font></td>
+				<td align=right><font size=4>±Û °³¼ö : ${listcount }</font></td>
 			</tr>
 			<tr align="center" valign="middle" bordercolor="#333333">
 				<td style="font-family: Tahoma; font-size: 17pt;" width="8%"
 					height="26">
-					<div align="center">ë²ˆí˜¸</div>
+					<div align="center">¹øÈ£</div>
 				</td>
 				<td style="font-family: Tahoma; font-size: 17pt;" width="50%">
-					<div align="center">ì œëª©</div>
+					<div align="center">Á¦¸ñ</div>
 				</td>
 				<td style="font-family: Tahoma; font-size: 17pt;" width="14%">
-					<div align="center">ìž‘ì„±ìž</div>
+					<div align="center">ÀÛ¼ºÀÚ</div>
 				</td>
 				<td style="font-family: Tahoma; font-size: 17pt;" width="17%">
-					<div align="center">ë‚ ì§œ</div>
+					<div align="center">³¯Â¥</div>
 				</td>
 				<td style="font-family: Tahoma; font-size: 17pt;" width="11%">
-					<div align="center">ì¡°íšŒìˆ˜</div>
+					<div align="center">Á¶È¸¼ö</div>
 				</td>
 			</tr>
 
@@ -111,11 +111,11 @@ Button {
 						<%
 							}
 						%>
-						â–¶
+						¢º
 						<%
 							} else {
 						%>
-						â–¶
+						¢º
 						<%
 							}
 						%>
@@ -141,10 +141,10 @@ Button {
 				<td colspan=7 style="font-family: Tahoma; font-size: 15pt;">
 					<%
 						if (nowpage <= 1) {
-					%> [ì´ì „]&nbsp; <%
+					%> [ÀÌÀü]&nbsp; <%
  	} else {
  %> <a
-					href="./ReviewList.re?page=<%=nowpage - 1%>">[ì´ì „]</a>&nbsp; <%
+					href="./ReviewList.re?page=<%=nowpage - 1%>">[ÀÌÀü]</a>&nbsp; <%
  	}
  %> <%
  	for (int a = startpage; a <= endpage; a++) {
@@ -159,10 +159,10 @@ Button {
  	}
  %> <%
  	if (nowpage >= maxpage) {
- %> [ë‹¤ìŒ] <%
+ %> [´ÙÀ½] <%
  	} else {
  %> <a
-					href="./ReviewList.re?page=<%=nowpage + 1%>">[ë‹¤ìŒ]</a> <%
+					href="./ReviewList.re?page=<%=nowpage + 1%>">[´ÙÀ½]</a> <%
  	}
  %>
 				</td>

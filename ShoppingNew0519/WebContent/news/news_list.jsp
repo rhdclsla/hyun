@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+	pageEncoding="euc-kr"%>
 <%@ page import="java.util.*"%>
 <%@ page import="net.news.db.*"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="euc-kr">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/style.css" />
 <%
@@ -20,14 +20,21 @@
 	
 %>
 </head>
-<body onload = "check()">
+<body>
 
 
 	<div id="container">
 
 		<div><jsp:include page="/header.jsp" flush="false"></jsp:include></div>
 		<body>
-			<!-- ê²Œì‹œíŒ ë¦¬ìŠ¤íŠ¸ -->
+			<%-- <%
+	if(session.getAttribute("id").equals("admin")){%>
+		<%=session.getAttribute("id")%>´Ô È¯¿µÇÕ´Ï´Ù.<br>
+		<a href = "MemberListViewAction.mo">°ü¸®ÀÚ¸ðµå Á¢¼Ó(È¸¿ø ¸ñ·Ïº¸±â)</a>
+	<%}else{%>
+		<%=	session.getAttribute("id")%>´Ô È¯¿µÇÕ´Ï´Ù.
+	<%} %> --%>
+			<!-- °Ô½ÃÆÇ ¸®½ºÆ® -->
 			<br>
 			<br>
 			<br>
@@ -45,16 +52,16 @@
 				<tr align="center" valign="middle" bordercolor="#333333">
 					<td style="font-family: Tahoma; font-size: 17pt;" width="8%"
 						height="26">
-						<div align="center">ë²ˆí˜¸</div>
+						<div align="center">¹øÈ£</div>
 					</td>
 					<td style="font-family: Tahoma; font-size: 17pt;" width="50%">
-						<div align="center">ì œëª©</div>
+						<div align="center">Á¦¸ñ</div>
 					</td>
 					<td style="font-family: Tahoma; font-size: 17pt;" width="17%">
-						<div align="center">ë‚ ì§œ</div>
+						<div align="center">³¯Â¥</div>
 					</td>
 					<td style="font-family: Tahoma; font-size: 17pt;" width="11%">
-						<div align="center">ì¡°íšŒìˆ˜</div>
+						<div align="center">Á¶È¸¼ö</div>
 					</td>
 				</tr>
 
@@ -90,9 +97,9 @@
 					<td colspan=7 style="font-family: Tahoma; font-size: 15pt;">
 						<%
 							if (nowpage <= 1) {
-						%> [ì´ì „]&nbsp; <%
+						%> [ÀÌÀü]&nbsp; <%
  	} else {
- %> <a href="./NewsList.ne?page=<%=nowpage - 1%>">[ì´ì „]</a>&nbsp; <%
+ %> <a href="./NewsList.ne?page=<%=nowpage - 1%>">[ÀÌÀü]</a>&nbsp; <%
  	}
  %> <%
  	for (int a = startpage; a <= endpage; a++) {
@@ -106,22 +113,20 @@
  	}
  %> <%
  	if (nowpage >= maxpage) {
- %> [ë‹¤ìŒ] <%
+ %> [´ÙÀ½] <%
  	} else {
- %> <a href="./NewsList.ne?page=<%=nowpage + 1%>">[ë‹¤ìŒ]</a> <%
+ %> <a href="./NewsList.ne?page=<%=nowpage + 1%>">[´ÙÀ½]</a> <%
  	}
  %>
 					</td>
 				</tr>
-			<%if(session.getAttribute("id").equals("admin")) {%>	
 			<tr align="right">		
-				<td colspan="5">
-					<a href="NewsWrite.ne">	 <img
+			<td colspan="5">
+<a href="NewsWrite.ne">	 <img
 							class="btnImage" src="image/write.PNG">
 					</a>
-				</td>
-			</tr>
-			<%}%>
+	</td>
+				</tr>
 			</table>
 
 		<div><jsp:include page="/bottom1.jsp" flush="false"></jsp:include></div>
@@ -130,4 +135,144 @@
 	</div>
 
 </body>
-</html>
+<!--
+
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+	pageEncoding="euc-kr"%>
+<%@ page import="java.util.*"%>
+<%@ page import="net.news.db.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="euc-kr">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/style.css" />
+<%
+	List newslist = (List) request.getAttribute("newslist");
+	int listcount = ((Integer) request.getAttribute("listcount")).intValue();
+	int nowpage = ((Integer) request.getAttribute("page")).intValue();
+	int maxpage = ((Integer) request.getAttribute("maxpage")).intValue();
+	int startpage = ((Integer) request.getAttribute("startpage")).intValue();
+	int endpage = ((Integer) request.getAttribute("endpage")).intValue();	
+		
+%>
+</head>
+<body>
+
+
+	<div id="container">
+
+		<div><jsp:include page="/header.jsp" flush="false"></jsp:include></div>
+		<body>
+			<%-- <%
+	if(session.getAttribute("id").equals("admin")){%>
+		<%=session.getAttribute("id")%>´Ô È¯¿µÇÕ´Ï´Ù.<br>
+		<a href = "MemberListViewAction.mo">°ü¸®ÀÚ¸ðµå Á¢¼Ó(È¸¿ø ¸ñ·Ïº¸±â)</a>
+	<%}else{%>
+		<%=	session.getAttribute("id")%>´Ô È¯¿µÇÕ´Ï´Ù.
+	<%} %> --%>
+			<!-- °Ô½ÃÆÇ ¸®½ºÆ® -->
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<table width=75% border="0" cellpadding="0" cellspacing="0"
+				align="center">
+
+				<tr align="center" valign="middle">
+
+				</tr>
+				<tr align="center" valign="middle" bordercolor="#333333">
+					<td style="font-family: Tahoma; font-size: 17pt;" width="8%"
+						height="26">
+						<div align="center">¹øÈ£</div>
+					</td>
+					<td style="font-family: Tahoma; font-size: 17pt;" width="50%">
+						<div align="center">Á¦¸ñ</div>
+					</td>
+					<td style="font-family: Tahoma; font-size: 17pt;" width="17%">
+						<div align="center">³¯Â¥</div>
+					</td>
+					<td style="font-family: Tahoma; font-size: 17pt;" width="11%">
+						<div align="center">Á¶È¸¼ö</div>
+					</td>
+				</tr>
+
+				<%
+					for (int i = 0; i < newslist.size(); i++) {
+						NewsBean bl = (NewsBean)newslist.get(i);
+				%>
+				<tr align="center" valign="middle" bordercolor="#333333"
+					onmouseover="this.style.backgroundColor='F8F8F8'"
+					onmouseout="this.style.backgroundColor=''">
+					<td height="23" style="font-family: Tahoma; font-size: 15pt;">
+						<%=bl.getNEWS_NUM()%>
+					</td>
+
+					<td style="font-family: Tahoma; font-size: 15pt;">
+						<div align="left">
+							<a href="./NewsDetailAction.ne?num=<%=bl.getNEWS_NUM()%>"> <%=bl.getNEWS_SUBJECT()%>
+							</a>
+						</div>
+					</td>
+
+					<td style="font-family: Tahoma; font-size: 15pt;">
+						<div align="center"><%=bl.getNEWS_DATE()%></div>
+					</td>
+					<td style="font-family: Tahoma; font-size: 15pt;">
+						<div align="center"><%=bl.getNEWS_READCOUNT()%></div>
+					</td>
+				</tr>
+				<%
+					}
+				%>
+				<tr align=center height=20>
+					<td colspan=7 style="font-family: Tahoma; font-size: 15pt;">
+						<%
+							if (nowpage <= 1) {
+						%> [ÀÌÀü]&nbsp; <%
+ 	} else {
+ %> <a href="./NewsList.ne?page=<%=nowpage - 1%>">[ÀÌÀü]</a>&nbsp; <%
+ 	}
+ %> <%
+ 	for (int a = startpage; a <= endpage; a++) {
+ 		if (a == nowpage) {
+ %> [<%=a%>] <%
+ 	} else {
+ %> <a href="./NewsList.ne?page=<%=a%>">[<%=a%>]
+					</a>&nbsp; <%
+ 	}
+ %> <%
+ 	}
+ %> <%
+ 	if (nowpage >= maxpage) {
+ %> [´ÙÀ½] <%
+ 	} else {
+ %> <a href="./NewsList.ne?page=<%=nowpage + 1%>">[´ÙÀ½]</a> <%
+ 	}
+ %>
+					</td>
+				</tr>
+			<tr align="right">		
+			<td colspan="5">
+<a href="NewsWrite.ne">	 <img
+							class="btnImage" src="image/write.PNG">
+					</a>
+	</td>
+				</tr>
+			</table>
+
+		<div><jsp:include page="/bottom1.jsp" flush="false"></jsp:include></div>
+		<div><jsp:include page="/bottom.jsp" flush="false"></jsp:include></div>
+
+	</div>
+
+</body>
+ </html>
+
+
+-->

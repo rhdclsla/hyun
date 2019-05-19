@@ -1,3 +1,4 @@
+﻿
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -143,25 +144,26 @@ body {
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
 	<!-- 배너사진 -->
 	<div class="banner">
 		<div id="slider">
 			<div id="slide-holder">
 			
 				<div class="slide">
-					<img src="image/hori7.jpg" width="1250px" height="680px"/>
+					<img src="image/M11.jpg" width="1250px" height="680px"/>
 				</div>
 				
 				<div class="slide">
-					<img src="image/M7.png" width="1250px" height="680px"/>
+					<img src="image/M2.jpg" width="1250px" height="680px"/>
 				</div>
 				
 				<div class="slide">
-					<img src="image/hori4.jpg" width="1250px" height="680px"/>
+					<img src="image/M3.jpg" width="1250px" height="680px"/>
 				</div>
 				
 				<div class="slide">
-					<img src="image/hori6.jpg" width="1250px" height="680px"/>
+					<img src="image/M6.jpg" width="1250px" height="680px"/>
 				</div> 
 				
 				<div class="slide" >
@@ -169,7 +171,7 @@ body {
 					</div>
 					
 				<div class="slide" >
-					<img src="image/hori5.jpg" width="1250px" height="680px"/>
+					<img src="image/M5.jpg" width="1250px" height="680px"/>
 				</div>
 				
 			</div>
